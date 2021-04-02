@@ -20,8 +20,51 @@ country_repository.save(country_1)
 country_2 = Country('England')
 country_repository.save(country_2)
 
+country_3 = Country('Poland')
+country_repository.save(country_3)
+
+country_4 = Country('Canada')
+country_repository.save(country_4)
+
+country_5 = Country('Vietnam')
+country_repository.save(country_5)
+
+country_6 = Country('Turkey')
+country_repository.save(country_6)
+
+country_7 = Country('Georgia')
+country_repository.save(country_7)
+
+country_8 = Country('USA')
+country_repository.save(country_8)
+
+
+
 city_1 = City('Aberdeen', country_1)
 city_repository.save(city_1)
+
+city_2 = City('Glasgow', country_1)
+city_repository.save(city_2)
+
+city_3 = City('Edinburgh', country_1)
+city_repository.save(city_3)
+
+city_4 = City('Falkirk', country_1)
+city_repository.save(city_4)
+
+city_8 = City('Inverness', country_1)
+city_repository.save(city_8)
+
+city_5 = City('Perth', country_1)
+city_repository.save(city_5)
+
+city_6 = City('Dundee', country_1)
+city_repository.save(city_6)
+
+city_7 = City('Glenrothes', country_1)
+city_repository.save(city_7)
+
+
 
 city_2 = City('London', country_2)
 city_repository.save(city_2)
