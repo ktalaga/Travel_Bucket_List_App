@@ -19,5 +19,5 @@ CREATE TABLE sights (
     id SERIAL PRIMARY KEY,
     name VARCHAR,
     visited BOOLEAN,
-    cities_id INT REFERENCES cities(id) ON DELETE CASCADE
+    city_id INT REFERENCES cities(id) ON DELETE CASCADE
 );
