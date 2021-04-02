@@ -1,6 +1,6 @@
 import unittest
  
-from tests.task_test import TestTask
+from tests.country_test import TestCountry
  
  
 if __name__ == '__main__':
