@@ -12,13 +12,13 @@ def delete_all():
     sql = "DELETE FROM countries"
     run_sql(sql)
 
-# def select_all():
-#     countries = []
+def select_all():
+    countries = []
 
-#     sql = "SELECT * FROM countries"
-#     results = run_sql(sql)
+    sql = "SELECT * FROM countries"
+    results = run_sql(sql)
 
-#     for row in results:
-#         country = Country(row['name'], row['visited'], row['id'])
-#         countries.append(country)
-#     return countries
+    for row in results:
+        country = Country(row['name'], row['visited'], row['id'])
+        countries.append(country)
+    return countries
