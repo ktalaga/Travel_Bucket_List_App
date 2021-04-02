@@ -24,4 +24,9 @@ def newccountry():
     country = Country(name, visited)
     country_repository.save(country)
     return redirect("/countries")
-    
+
+
+@countries_blueprint.route("/countries/<id>/edit")
+def edit(id):
+    country = country_repository.select(id)
+    return render_template("/countries/edit.html", country = country)

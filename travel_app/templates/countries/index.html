@@ -3,7 +3,7 @@
 <h1>Countries</h1>
 
 {% for country in countries %}
-{{country.name}}
+{{country.name}}<p><a href="/countries/{{country.id}}/edit">Edit</a></p>
 {% endfor %}
 
 {% endblock %}
