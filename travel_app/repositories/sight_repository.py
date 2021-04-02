@@ -11,3 +11,14 @@ def save(sight):
 def delete_all():
     sql = "DELETE FROM cities"
     run_sql(sql)
+
+def select_all():
+    sights = []
+
+    sql = "SELECT * FROM sights"
+    results = run_sql(sql)
+
+    for row in results:
+        sight = Sight(row['name'], row['visited'], row['id'])
+        sights.append(sight)
+    return sights

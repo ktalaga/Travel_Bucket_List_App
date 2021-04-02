@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Sights</h1>
+
+{% for sight in sights %}
+{{sight.name}}
+{% endfor %}
+
+{% endblock %}

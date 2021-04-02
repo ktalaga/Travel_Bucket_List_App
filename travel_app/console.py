@@ -69,5 +69,19 @@ city_repository.save(city_7)
 city_2 = City('London', country_2)
 city_repository.save(city_2)
 
+
+
 sight_1 = Sight('Royal Albert Hall', city_2)
 sight_repository.save(sight_1)
+
+sight_2 = Sight('Tower Bridge', city_2)
+sight_repository.save(sight_2)
+
+sight_3 = Sight('Big Ben', city_2)
+sight_repository.save(sight_3)
+
+sight_4 = Sight('Tower of London', city_2)
+sight_repository.save(sight_4)
+
+sight_5 = Sight('Buckingham Palace', city_2)
+sight_repository.save(sight_5)
