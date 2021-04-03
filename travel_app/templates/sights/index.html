@@ -2,8 +2,11 @@
 {% block content %}
 <h1>Sights</h1>
 
-{% for sight in sights %}
-{{sight.name}}
-{% endfor %}
+<nav>
+    <ul>
+        <li><a href="/sights/notvisited">Bucket List</a></li>
+        <li><a href="sights/visited">Visited</a></li>
+    </ul></li>
+    </nav>
 
 {% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Visited Sights</h1>
+
+
+
+
+{% for sight in sights %}
+{% if sight.visited %}
+<div>
+<a href="/sights/{{sight.id}}">{{sight.name}}</a>
+<div>
+<p>You have already  visited this sight</p>
+
+{% endif %}
+{% endfor %}
+
+<a href="/sights/notvisited">Go to Sights Bucket List</a>
+
+{% endblock %}

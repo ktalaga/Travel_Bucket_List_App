@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Sights: Sights on Bucket List</h1>
+
+
+
+
+{% for sight in sights %}
+{% if not sight.visited %}
+<div>
+<a href="/sights/{{sight.id}}">{{sight.name}}</a>
+<div>
+<p>You haven't visited this sight yet</p>
+</div>
+<form action="/sights/{{ sight.id }}/visited" method="POST">
+    <input type="submit" value="Mark as Visited" />  
+</form>
+</div>
+<br>
+{% endif %}
+{% endfor %}
+<a href="/sights/visited">Go to Visited Sights</a>
+
+{% endblock %}

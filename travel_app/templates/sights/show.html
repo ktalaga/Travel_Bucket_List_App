@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <p>{{sight.name}}</p>
+    <p>{{sight.city.name}}</p>
+        {% if sight.visited %}
+        <p>You've visited this sight</p>
+        {% else %}
+        <p>You haven't visited this sight yet</p>
+        {% endif %}
+
+    <p><a href="/sights/{{sight.id}}/edit">Edit sight</a></p>
+
+    <p><a href="/sights">Back to Sights</a></p>
+
+
+</div>
+
+
+<form action="/sights/{{ sight.id }}/delete" method="POST">
+    <input type="submit" value="delete" /></form>
+{% endblock %}
