@@ -7,11 +7,14 @@ import repositories.country_repository as country_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
-
 @countries_blueprint.route("/countries")
 def countries():
+    return render_template("/countries/index.html")
+
+@countries_blueprint.route("/notvisited")
+def not_visited():
     countries = country_repository.select_all()
-    return render_template("countries/index.html", countries = countries)
+    return render_template("countries/not_visited.html", countries = countries)
 
 
 @countries_blueprint.route("/addcountry")

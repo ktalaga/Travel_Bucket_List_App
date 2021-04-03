@@ -48,3 +48,8 @@ def mark_visited(id):
     values = [True, id]
     run_sql(sql, values)
 
+def select(visited):
+    country = None
+    sql = "SELECT * FROM countries WHERE visited = %s"
+    values = [visited]
+    result = run_sql(sql, values)[0]
