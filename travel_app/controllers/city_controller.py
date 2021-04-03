@@ -5,6 +5,7 @@ from models.city import City
 from models.country import Country
 
 import repositories.city_repository as city_repository
+import repositories.country_repository as country_repository
 
 cities_blueprint = Blueprint("cities", __name__)
 
@@ -39,3 +40,8 @@ def show(id):
 def delete_city(id):
     city_repository.delete(id)
     return redirect('/cities')
+
+@cities_blueprint.route("/addcity")
+def addcity():
+    countries = country_repository.select_all()
+    return render_template("cities/addcity.html", countries = countries)
