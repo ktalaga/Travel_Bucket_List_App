@@ -11,12 +11,12 @@ countries_blueprint = Blueprint("countries", __name__)
 def countries():
     return render_template("/countries/index.html")
 
-@countries_blueprint.route("/notvisited")
+@countries_blueprint.route("/countries/notvisited")
 def not_visited():
     countries = country_repository.select_all()
     return render_template("countries/not_visited.html", countries = countries)
 
-@countries_blueprint.route("/visited")
+@countries_blueprint.route("/countries/visited")
 def visited():
     countries = country_repository.select_all()
     return render_template("countries/visited.html", countries = countries)
@@ -67,5 +67,5 @@ def delete_country(id):
 @countries_blueprint.route("/countries/<id>/visited", methods=['POST'])
 def mark_visited(id):
     country_repository.mark_visited(id)
-    return redirect("/notvisited")
+    return redirect("/countries/notvisited")
 

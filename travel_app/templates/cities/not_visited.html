@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Cities: Visited</h1>
+<h1>Cities: Not Visited</h1>
 
 
 
 
 {% for city in cities %}
-{% if city.visited %}
+{% if not city.visited %}
 <div>
 <a href="/cities/{{city.id}}">{{city.name}}</a>
 <div>
-<p>You have already  visited this country</p>
+<p>You haven't visited this country yet</p>
 </div>
 <form action="/cities/{{ city.id }}/visited" method="POST">
     <input type="submit" value="Mark as Visited" />  

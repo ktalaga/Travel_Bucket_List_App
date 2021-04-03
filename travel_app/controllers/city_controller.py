@@ -12,17 +12,15 @@ def cities():
     cities = city_repository.select_all()
     return render_template("cities/index.html", cities = cities)
 
-@cities_blueprint.route("/addcity")
-def addcity():
-    return render_template("cities/addcity.html")
-
-@cities_blueprint.route("/cities/visited")
-def cities_visited():
-    cities = city_repository.select_all()
-    return render_template("/cities/visited.html", cities=cities)
 
 @cities_blueprint.route("/cities/notvisited")
-def cities_notvisited():
+def not_visited():
     cities = city_repository.select_all()
-    return render_template("/cities/notvisited.html", cities=cities)
+    return render_template("cities/not_visited.html", cities = cities)
+
+@cities_blueprint.route("/cities/visited")
+def visited():
+    cities = city_repository.select_all()
+    return render_template("cities/visited.html", cities = cities)
+
 
