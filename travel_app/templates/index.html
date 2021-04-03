@@ -1,4 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p>Main Page</p>
+<h1>Countries</h1>
+
+{% for country in countries %}
+{{country.name}}
+{% endfor %}
+
+<h1>Cities</h1>
+
+{% for city in cities %}
+{{city.name}}
+{% endfor %}
+
+<h1>Sights</h1>
+
+{% for sight in sights %}
+{{sight.name}}
+{% endfor %}
+
+
+
+
 {% endblock %}

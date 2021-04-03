@@ -28,12 +28,6 @@ def newccountry():
     return redirect("/countries")
 
 
-@countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
-def delete_country(id):
-    country_repository.delete(id)
-    return redirect('/countries')
-
-
 @countries_blueprint.route("/countries/<id>")
 def show(id):
     country = country_repository.select(id)
@@ -54,4 +48,16 @@ def update(id):
     country = Country(name, visited, id)
     country_repository.update(country)
     return redirect(f"/countries/{id}")
+
+
+@countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
+def delete_country(id):
+    country_repository.delete(id)
+    return redirect('/countries')
+
+
+@countries_blueprint.route("/countries/<id>/visited", methods=['POST'])
+def mark_visited(id):
+    country_repository.mark_visited(id)
+    return redirect("/countries")
 

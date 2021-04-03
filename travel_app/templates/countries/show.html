@@ -2,11 +2,20 @@
 {% block content %}
 <div>
     <p>{{country.name}}</p>
-    <p>Visited? {{country.visited}}</p>
+        {% if country.visited %}
+        <p>You've visited this country</p>
+        {% else %}
+        <p>You haven't visited this country yet</p>
+        {% endif %}
 
     <p><a href="/countries/{{country.id}}/edit">Edit Country</a></p>
+
+    <p><a href="/countries">Back to Countries</a></p>
+
 
 </div>
 
 
+<form action="/countries/{{ country.id }}/delete" method="POST">
+    <input type="submit" value="delete" /></form>
 {% endblock %}

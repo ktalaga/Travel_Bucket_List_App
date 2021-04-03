@@ -43,3 +43,8 @@ def update(country):
     values = [country.name, country.visited, country.id]
     run_sql(sql, values)
 
+def mark_visited(id):
+    sql = "UPDATE countries SET visited = %s WHERE id = %s"
+    values = [True, id]
+    run_sql(sql, values)
+
