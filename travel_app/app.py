@@ -9,6 +9,9 @@ from controllers.main_page_controller import main_page_blueprint
 from models.country import Country
 import repositories.country_repository as country_repository
 
+from models.city import City
+import repositories.city_repository as city_repository
+
 app = Flask(__name__)
 
 app.register_blueprint(countries_blueprint)

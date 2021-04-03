@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for city in cities %}
+
+{% if city.visited%}
+
+<div>
+    <a href="#">{{city.name}}</a>
+    <div>
+        {% if city.visited %}
+        <p>You've visited this city</p>
+        {% else %}
+        <p>You haven't visited this city yet</p>
+        {% endif %}
+    </div>
+    <br>
+    
+{% endif %}
+    
+{% endfor %}
+
+{% endblock %}

@@ -66,8 +66,29 @@ city_repository.save(city_7)
 
 
 
-city_2 = City('London', country_2)
-city_repository.save(city_2)
+city_9 = City('London', country_2, True)
+city_repository.save(city_9)
+
+city_10 = City('Manchester', country_2, True)
+city_repository.save(city_10)
+
+city_11 = City('London', country_2, True)
+city_repository.save(city_11)
+
+city_12 = City('Manchester', country_2, True)
+city_repository.save(city_12)
+
+city_13 = City('London', country_2, True)
+city_repository.save(city_13)
+
+city_14 = City('Manchester', country_2, True)
+city_repository.save(city_14)
+
+city_15 = City('London', country_2, True)
+city_repository.save(city_15)
+
+city_16 = City('Manchester', country_2, True)
+city_repository.save(city_16)
 
 
 

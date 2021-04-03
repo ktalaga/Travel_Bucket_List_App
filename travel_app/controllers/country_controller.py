@@ -67,5 +67,5 @@ def delete_country(id):
 @countries_blueprint.route("/countries/<id>/visited", methods=['POST'])
 def mark_visited(id):
     country_repository.mark_visited(id)
-    return redirect("/countries")
+    return redirect("/notvisited")
 

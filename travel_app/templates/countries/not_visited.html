@@ -2,6 +2,9 @@
 {% block content %}
 <h1>Countries</h1>
 
+
+
+
 {% for country in countries %}
 {% if not country.visited %}
 <div>
@@ -20,5 +23,6 @@
 <br>
 {% endif %}
 {% endfor %}
+<a href="/visited">Go to Visited Countries</a>
 
 {% endblock %}

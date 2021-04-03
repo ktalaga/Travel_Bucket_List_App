@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Cities</h1>
 
-{% for city in cities %}
-{{city.name}}
-{% endfor %}
+
+<nav>
+    <ul>
+        <li><a href="/cities/visited">Visited Cities</a><br></li>
+        <li><a href="/cities/notvisited">Cities on the Bucket List</a></li>
+    </ul>
+</nav>
 
 {% endblock %}
