@@ -7,10 +7,12 @@ import repositories.country_repository as country_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
+
 @countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
     return render_template("countries/index.html", countries = countries)
+
 
 @countries_blueprint.route("/addcountry")
 def addcountry():
@@ -31,13 +33,25 @@ def delete_country(id):
     country_repository.delete(id)
     return redirect('/countries')
 
+
 @countries_blueprint.route("/countries/<id>")
 def show(id):
     country = country_repository.select(id)
     return render_template("/countries/show.html", country = country)
 
+
 @countries_blueprint.route("/countries/<id>/edit")
 def edit(id):
     country = country_repository.select(id)
     return render_template("/countries/edit.html", country = country)
+
+
+@countries_blueprint.route("/countries/<id>", methods=["POST"])
+def update(id):
+    name = request.form["country"]
+    visited = request.form["visited"]
+    
+    country = Country(name, visited, id)
+    country_repository.update(country)
+    return redirect(f"/countries/{id}")
 

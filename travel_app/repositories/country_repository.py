@@ -42,3 +42,4 @@ def update(country):
     sql = "UPDATE countries SET (name, visited) = (%s, %s) WHERE id = %s"
     values = [country.name, country.visited, country.id]
     run_sql(sql, values)
+
