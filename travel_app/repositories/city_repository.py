@@ -32,3 +32,15 @@ def mark_visited(id):
     sql = "UPDATE cities SET visited = %s WHERE id = %s"
     values = [True, id]
     run_sql(sql, values)
+
+
+def select(id):
+    city = None
+    sql = "SELECT * FROM cities WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        country = country_repository.select(result['country_id'])
+        city = City(result['name'], country, result['visited'], result['id'] )
+    return city

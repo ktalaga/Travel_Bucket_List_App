@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 
 from models.city import City
+from models.country import Country
 
 import repositories.city_repository as city_repository
 
@@ -27,5 +28,10 @@ def visited():
 def mark_visited(id):
     city_repository.mark_visited(id)
     return redirect("/cities/notvisited")
+
+@cities_blueprint.route("/cities/<id>")
+def show(id):
+    city = city_repository.select(id)
+    return render_template("/cities/show.html", city = city)
 
 
