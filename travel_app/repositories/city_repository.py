@@ -44,3 +44,8 @@ def select(id):
         country = country_repository.select(result['country_id'])
         city = City(result['name'], country, result['visited'], result['id'] )
     return city
+
+def delete(id):
+    sql = "DELETE FROM cities WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

@@ -35,3 +35,7 @@ def show(id):
     return render_template("/cities/show.html", city = city)
 
 
+@cities_blueprint.route("/cities/<id>/delete", methods=['POST'])
+def delete_city(id):
+    city_repository.delete(id)
+    return redirect('/cities')
