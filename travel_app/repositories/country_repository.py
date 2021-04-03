@@ -32,3 +32,14 @@ def select(id):
     if result is not None:
         country = Country(result['name'], result['visited'])
     return country
+
+def update(country):
+    sql = "UPDATE countries SET (name, visited) = (%s, %s) WHERE id = %s"
+    values = [country.name, country.visited, country.id]
+    print(values)
+    run_sql(sql, values)
+
+def delete(id):
+    sql = "DELETE FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

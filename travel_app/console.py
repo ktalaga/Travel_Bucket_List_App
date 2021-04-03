@@ -85,3 +85,11 @@ sight_repository.save(sight_4)
 
 sight_5 = Sight('Buckingham Palace', city_2)
 sight_repository.save(sight_5)
+
+
+
+
+
+
+
+pdb.set_trace()

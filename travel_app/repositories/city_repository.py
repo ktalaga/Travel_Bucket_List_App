@@ -23,11 +23,3 @@ def select_all():
         city = City(row['name'], row['visited'], row['id'])
         cities.append(city)
     return cities
-
-def save(city):
-    sql = "INSERT INTO cities (name, country, visited) VALUES (%s, %s, %s) RETURNING *"
-    values = [cities.name, cities.country.name, visited]
-    results = run_sql(sql, values)
-    id = results[0]['id']
-    user.id = id
-    return user
