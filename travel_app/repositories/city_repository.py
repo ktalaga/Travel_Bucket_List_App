@@ -27,3 +27,8 @@ def select_all():
         city = City(row['name'], country, row['visited'], row['id'])
         cities.append(city)
     return cities
+
+def mark_visited(id):
+    sql = "UPDATE cities SET visited = %s WHERE id = %s"
+    values = [True, id]
+    run_sql(sql, values)

@@ -10,13 +10,8 @@
 <div>
 <a href="/cities/{{city.id}}">{{city.name}}</a>
 <div>
-<p>You have already  visited this country</p>
-</div>
-<form action="/cities/{{ city.id }}/visited" method="POST">
-    <input type="submit" value="Mark as Visited" />  
-</form>
-</div>
-<br>
+<p>You have already  visited this city</p>
+
 {% endif %}
 {% endfor %}
 <a href="/cities/visited">Go to Visited Cities</a>
