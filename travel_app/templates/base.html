@@ -7,42 +7,34 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>{title}</title>
+    <title>{{title}}</title>
 </head>
 <body>
     <div class="wrapper">
     <header>
         <div class="logo">
             <h1>Travel Bucket List</h1>
-            <i class="fab fa-accessible-icon"></i>
-
         </div>
     </header>
-        <nav>
-            <ul>
+        <nav class="menu">
+            <ul class="menu_ul">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/countries">Countries</a></li>
+            <li><a href="/cities">Cities</a></li>
+            <li><a href="/sights">Sights</a></li>
+            <li><a href="#">Add Destination</a></li>
             <li>
-                <a href="/">Home Page</a>
-            </li>
-            <li>
-                <a href="/countries">Countries</a>
-            </li>
-            <li>
-                <a href="/cities">Cities</a>
-            </li>
-            <li>
-                <a href="/sights">Sights</a>
-            </li>
-            <li><a href="#">Add Destination</a>
-                <ul>
+                <ol>
                     <li><a href="/addcountry">Add Country</a></li>
                     <li><a href="/addcity">Add City </a></li>
                     <li><a href="/addsight">Add Sight</a></li>
-                </ul></li>
-                <li><a href="#">Search</a>
-                    <ul>
-                        <li><a href="/search/bycountry">By Country</a></li>
-
-                    </ul></li>
+                </ol>
+            </li>
+            <li>
+                <ol><a href="#">Search</a>
+                    <li><a href="/search/bycountry">By Country</a></li>
+                </ol>
+            </li>
             </ul>
         </nav>
         

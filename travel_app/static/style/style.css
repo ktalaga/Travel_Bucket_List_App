@@ -1,5 +1,4 @@
 body{
-    /* Background pattern from Toptal Subtle Patterns */
     background-image: url(img/hexellence.png);
     color: #303030;
     font-family: 'Lato', sans-serif;
@@ -7,22 +6,58 @@ body{
     margin: 0 !important;
 }
 
-.wrapper 
+/* .wrapper 
 {
-    width: 100%;
+    width: 100%; */
 }
 
 header 
 {
     width: 100%;
-    padding: 40px 0;
+    padding: 40px, 0;
+    margin-top: 0;
+
 }
 
 .logo 
 {
-    width: 1000px;
-    font-size: 48px;
+    width: 1200px;
+    font-size: 40px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-top: 0;
+
 }
+
+.menu {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #303030;
+    text-align: center;
+    border-top: 2px solid #202020;
+    border-bottom: 2px solid #202020;
+
+}
+
+.menu_ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 25px;
+    height: 40px;
+    line-height: 200%;
+    display: inline-flex;
+}
+
+ol {
+    list-style-type: none;
+}
+
+ul a{
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    padding-inline: 15px;
+}
+
