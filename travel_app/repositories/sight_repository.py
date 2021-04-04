@@ -55,3 +55,8 @@ def update(sight):
     sql = "UPDATE sights SET (name, city_id, visited) = (%s, %s, %s) WHERE id = %s"
     values = [sight.name, sight.city.id, sight.visited, sight.id]
     run_sql(sql, values)
+
+def mark_notvisited(id):
+    sql = "UPDATE sights SET visited = %s WHERE id = %s"
+    values = [False, id]
+    run_sql(sql, values)

@@ -25,7 +25,7 @@ def visited():
     sights = sight_repository.select_all()
     return render_template("sights/visited.html", sights = sights)
 
-@sights_blueprint.route("/sights/<id>/visited", methods=['POST'])
+@sights_blueprint.route("/sights/<id>/notvisited", methods=['POST'])
 def mark_visited(id):
     sight_repository.mark_visited(id)
     return redirect("/sights/notvisited")
@@ -74,3 +74,9 @@ def update(id):
     sight = Sight(name, city, visited, id)
     sight_repository.update(sight)
     return redirect(f"/sights/{id}")
+
+
+@sights_blueprint.route("/sights/<id>/visited", methods=['POST'])
+def mark_notvisited(id):
+        sight_repository.mark_notvisited(id)
+        return redirect("/sights/visited")

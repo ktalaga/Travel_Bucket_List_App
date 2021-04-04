@@ -13,6 +13,13 @@
 <div>
 <p>You have already  visited this sight</p>
 
+</div>
+<form action="/sights/{{ sight.id }}/visited" method="POST">
+    <input type="submit" value="Move to Bucket List" />  
+</form>
+</div>
+<br>
+
 {% endif %}
 {% endfor %}
 
