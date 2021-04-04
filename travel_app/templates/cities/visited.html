@@ -13,6 +13,12 @@
 <div>
 <p>You have already  visited this city</p>
 
+</div>
+<form action="/cities/{{ city.id }}/visited" method="POST">
+    <input type="submit" value="Move to Bucket List" />  
+</form>
+</div>
+<br>
 {% endif %}
 {% endfor %}
 

@@ -25,7 +25,7 @@ def visited():
     cities = city_repository.select_all()
     return render_template("cities/visited.html", cities = cities)
 
-@cities_blueprint.route("/cities/<id>/visited", methods=['POST'])
+@cities_blueprint.route("/cities/<id>/notvisited", methods=['POST'])
 def mark_visited(id):
     city_repository.mark_visited(id)
     return redirect("/cities/notvisited")
@@ -74,3 +74,8 @@ def update(id):
     city = City(name, country, visited, id)
     city_repository.update(city)
     return redirect(f"/cities/{id}")
+
+@cities_blueprint.route("/cities/<id>/visited", methods=['POST'])
+def mark_notvisited(id):
+        city_repository.mark_notvisited(id)
+        return redirect("/cities/visited")
