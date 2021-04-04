@@ -6,9 +6,6 @@ body{
     margin: 0 !important;
 }
 
-
-
-
 header 
 {
     width: 100%;
@@ -20,22 +17,25 @@ header
 .logo 
 {
     width: 1000px;
-    font-size: 40px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
     margin-top: 0;
 
 }
 
 .menu {
-    width: 100%;
-    padding: 10px 0;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #303030;
-    text-align: center;
-    border-top: 3px solid #202020;
-    border-bottom: 3px solid #202020;
-    height: 40px;
+    height: 140px;
+
+
+    position: sticky;
+    top: 0px;
 }
 
 .menu_ul {
@@ -44,8 +44,10 @@ header
     list-style-type: none;
     font-size: 25px;
     line-height: 200%;
-    display: inline-flex;
-}
+    /* display: inline-flex; */
+    display: flex;
+
+}  
 
 ol {
     list-style-type: none;
@@ -62,6 +64,7 @@ ul a{
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 30px;
 }
 
 #footer {
@@ -74,10 +77,11 @@ ul a{
 .socials{
     width: 100%;
     text-align: center;
-    border: 1px solid red;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 
 }
 
@@ -87,6 +91,9 @@ ul a{
     height: 40px;
     background-color: #4668b3;
     opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .fb:hover{
@@ -98,6 +105,9 @@ ul a{
     height: 40px;
     background-color: #405DE6;
     opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .ig:hover{
@@ -110,6 +120,9 @@ ul a{
     height: 40px;
     background-color: #E60023;
     opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .pin:hover{
@@ -120,13 +133,26 @@ ul a{
 .git{
     width: 230px;
     height: 40px;
-    background-color: #3095d3;
+    background-color: #c9510c;
     opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .git:hover{
-    background-color: #3095d3;
+    background-color: #c9510c;
     opacity: 1;
 }
+#bottom {
+    background-color: #303030;
+    color: whitesmoke;
+    width: 100% !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
