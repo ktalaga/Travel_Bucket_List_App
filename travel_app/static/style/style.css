@@ -6,10 +6,8 @@ body{
     margin: 0 !important;
 }
 
-/* .wrapper 
-{
-    width: 100%; */
-}
+
+
 
 header 
 {
@@ -21,7 +19,7 @@ header
 
 .logo 
 {
-    width: 1200px;
+    width: 1000px;
     font-size: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -35,9 +33,9 @@ header
     padding: 10px 0;
     background-color: #303030;
     text-align: center;
-    border-top: 2px solid #202020;
-    border-bottom: 2px solid #202020;
-
+    border-top: 3px solid #202020;
+    border-bottom: 3px solid #202020;
+    height: 40px;
 }
 
 .menu_ul {
@@ -45,7 +43,6 @@ header
     margin: 0;
     list-style-type: none;
     font-size: 25px;
-    height: 40px;
     line-height: 200%;
     display: inline-flex;
 }
@@ -60,4 +57,37 @@ ul a{
     display: block;
     padding-inline: 15px;
 }
+
+.content {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 1000px;
+
+}
+
+.socials{
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.socaildivs{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+
+}
+.fb{
+    width: 250px;
+    height: 40px;
+    border: 1px solid black;
+}
+
 

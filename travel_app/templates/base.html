@@ -10,7 +10,7 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <div class="wrapper">
+
     <header>
         <div class="logo">
             <h1>Travel Bucket List</h1>
@@ -22,25 +22,51 @@
             <li><a href="/countries">Countries</a></li>
             <li><a href="/cities">Cities</a></li>
             <li><a href="/sights">Sights</a></li>
-            <li><a href="#">Add Destination</a></li>
-            <li>
+            <li><a href="#">Add Destination</a>
                 <ol>
                     <li><a href="/addcountry">Add Country</a></li>
                     <li><a href="/addcity">Add City </a></li>
                     <li><a href="/addsight">Add Sight</a></li>
                 </ol>
             </li>
-            <li>
-                <ol><a href="#">Search</a>
+            <li><a href="#">Search</a>
+                <ol>
                     <li><a href="/search/bycountry">By Country</a></li>
                 </ol>
             </li>
             </ul>
         </nav>
-        
+        <div class="content"> 
     {% block content %}
 
+
+    
+
     {% endblock%}
-</div>
+
+
 </body>
+<footer id="footer">
+<div class="socials">
+    <div class="socialdivs">
+        <div class="fb">
+
+        </div>
+        <div class="ig">
+
+        </div>
+        <div class="tw">
+
+        </div>
+        <div class="yt">
+
+        </div>
+        <div style="clear: both;"></div>
+
+
+    </div>
+
+
+</div>
+</footer>
 </html>
