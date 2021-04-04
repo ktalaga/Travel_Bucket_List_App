@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Countries</h1>
+<h2>Most Popular Countries</h2>
 
 {% for country in countries %}
 {{country.name}}
 {% endfor %}
 
-<h1>Cities</h1>
+<h2>Most Popular Cities</h2>
 
 {% for city in cities %}
 {{city.name}}
 {% endfor %}
 
-<h1>Sights</h1>
+<h2>Most Popular Sights</h2>
 
 {% for sight in sights %}
 {{sight.name}}

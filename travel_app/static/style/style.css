@@ -1,3 +1,28 @@
-body {
-    background-color: aqua;
+body{
+    /* Background pattern from Toptal Subtle Patterns */
+    background-image: url(img/hexellence.png);
+    color: #303030;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    margin: 0 !important;
+}
+
+.wrapper 
+{
+    width: 100%;
+}
+
+header 
+{
+    width: 100%;
+    padding: 40px 0;
+}
+
+.logo 
+{
+    width: 1000px;
+    font-size: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
