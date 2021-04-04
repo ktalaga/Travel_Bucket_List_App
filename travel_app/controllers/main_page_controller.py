@@ -20,3 +20,5 @@ def main_page():
     cities = city_repository.select_all()
     sights = sight_repository.select_all()
     return render_template("index.html", countries = countries, cities = cities, sights = sights)
+
+

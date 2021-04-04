@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <title>{title}</title>
 </head>
 <body>
@@ -30,8 +31,14 @@
                     <li><a href="/addcity">Add City </a></li>
                     <li><a href="/addsight">Add Sight</a></li>
                 </ul></li>
+                <li><a href="#">Search</a>
+                    <ul>
+                        <li><a href="/search/bycountry">By Country</a></li>
+
+                    </ul></li>
             </ul>
         </nav>
+        
     {% block content %}
 
     {% endblock%}

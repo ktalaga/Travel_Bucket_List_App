@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="bycountry">
+
+    <div>
+        <label for="country">Country</label>
+        <select id="country" name="country_id">
+            {% for country in countries%}
+                <option value={{country.id}}>{{country.name}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% for country in countries %}
+    <a href="/countries/{{country.id}}/edit">{{country.name}}</a>
+    {% endfor %}
+    
+
+    <button type="submit">Search Destination</button>
+</form>
+
+
+{% endblock %}
