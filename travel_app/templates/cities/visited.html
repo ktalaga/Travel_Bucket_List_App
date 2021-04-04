@@ -9,11 +9,14 @@
 {% if city.visited %}
 <div>
 <a href="/cities/{{city.id}}">{{city.name}}</a>
+<p>{{city.country.name}}</p>
 <div>
 <p>You have already  visited this city</p>
 
 {% endif %}
 {% endfor %}
+
+
 
 <a href="/cities/notvisited">Go to Cities Bucket List</a>
 

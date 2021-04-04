@@ -48,4 +48,9 @@ def mark_visited(id):
     values = [True, id]
     run_sql(sql, values)
 
+def mark_notvisited(id):
+    sql = "UPDATE countries SET visited = %s WHERE id = %s"
+    values = [False, id]
+    run_sql(sql, values)
+
 

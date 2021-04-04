@@ -6,14 +6,20 @@
 {% if country.visited %}
 <div>
 <a href="/countries/{{country.id}}">{{country.name}}</a>
+<p>You have already  visited this country</p>
 <div>
-    {% if country.visited %}
-    <p>You've visited this country</p>
-    {% else %}
-    <p>You haven't visited this country yet</p>
-    {% endif %}
+
+
+</div>
+<form action="/countries/{{ country.id }}/visited" method="POST">
+    <input type="submit" value="Move to Bucket List" />  
+</form>
+</div>
+<br>
 
 {% endif %}
 {% endfor %}
+
+<a href="/countries/notvisited">Go to Bucket List Countries</a>
 
 {% endblock %}

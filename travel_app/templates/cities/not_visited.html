@@ -9,6 +9,7 @@
 {% if not city.visited %}
 <div>
 <a href="/cities/{{city.id}}">{{city.name}}</a>
+<p>{{city.country.name}}</p>
 <div>
 <p>You haven't visited this city yet</p>
 </div>
