@@ -79,9 +79,27 @@ ul > li > ol {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: none;
 }
 ul > li > ol > li {
-    background-color: #999999;
+    background-color: #b8b8b8;
+    position: relative;
+    z-index: 100;
+
+}
+
+ul > li > ol > li:hover {
+    background-color: #303030;
+}
+ul > li > ol > li > a {
+    color: #303030 ;
+}
+ul > li > ol > li:hover > a {
+    color: whitesmoke ;
+}
+
+ul > li:hover > ol {
+    display: block;
 }
 
 .content {
