@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-<!-- <h2>Most Popular Countries</h2> -->
+<h2 class="h2">Most Popular Countries</h2>
 
-{% for country in countries %}
+{% for country in countries[:8] %}
 <div class="box">{{country.name}}</div>
 {% endfor %}
 
-<!-- <h2>Most Popular Cities</h2> -->
+<h2 class="h2">Most Popular Cities</h2>
 
-{% for city in cities %}
+{% for city in cities[:8] %}
 <div class="box">{{city.name}}</div>
 {% endfor %}
 
-<!-- <h2>Most Popular Sights</h2> -->
+<h2 class="h2">Most Popular Sights</h2>
 
-{% for sight in sights %}
+{% for sight in sights[:8] %}
 <div class="box">{{sight.name}}</div>
 {% endfor %}
 

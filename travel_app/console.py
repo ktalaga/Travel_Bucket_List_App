@@ -90,6 +90,9 @@ city_repository.save(city_15)
 city_16 = City('Bristol', country_2, True)
 city_repository.save(city_16)
 
+city_17 = City('Cracow', country_3)
+city_repository.save(city_17)
+
 
 
 sight_1 = Sight('Royal Albert Hall', city_9)
@@ -106,6 +109,15 @@ sight_repository.save(sight_4)
 
 sight_5 = Sight('Buckingham Palace', city_9)
 sight_repository.save(sight_5)
+
+sight_6 = Sight('Wawel Royal Castle', city_17)
+sight_repository.save(sight_6)
+
+sight_6 = Sight('The Jewish Quarter', city_17)
+sight_repository.save(sight_6)
+
+sight_6 = Sight('Salt Mine', city_17)
+sight_repository.save(sight_6)
 
 
 
