@@ -108,27 +108,25 @@ ul > li:hover > ol {
     display: block;
 }
 
-.content {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-}
 
 #footer {
     width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
     bottom: 0;
+    height: 80px;
 
-    height: 80px;  
+
 
 
 }
 
 .socials{
-    width: 100%;
+
+    
     text-align: center;
-    padding-top: 120px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -210,7 +208,23 @@ ul > li:hover > ol {
     height: 228px;
     background-color: teal;
     border: 1px solid #303030;
-    flex: 25%;
+    margin-top: 26px;
+
+}
+.content {
+    padding-top: 30px;
+    width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding-bottom: 100px;
+
+}
+.h1 {
+    
 }
 
 
