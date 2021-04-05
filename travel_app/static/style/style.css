@@ -227,8 +227,8 @@ ul > li:hover > ol {
     flex: 100%;
     
 }
-
-
-
-
-
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+}
