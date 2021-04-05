@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="edit_form_container">
+
+<div  class="edit_form">
+
 
 <form action="/countries/{{country.id}}" method="post">
     <label for="country">Name:</label>
@@ -17,6 +21,7 @@
     
     
 </form>
-
+</div>
+</div>
 
 {% endblock %}

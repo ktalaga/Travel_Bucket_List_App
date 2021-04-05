@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="edit_form_container">
+
+<div  class="edit_form">
 
 <form action="/sights/{{sight.id}}" method="post">
     <label for="sight">Name:</label>
@@ -11,7 +14,7 @@
             {% for city in cities%}
                 <option value={{city.id}}>{{city.name}}</option>
             {% endfor %}
-        </select> <p>If city is not on the list, you can add your city <a href="/addcity">here.</a></li></p>
+        </select> <p class="small_text">If city is not on the list, you can add your city <a class="small_link" href="/addcity">here.</a></li></p>
     </div>
 
     <label for="visited">Visited?</label>
@@ -26,6 +29,7 @@
     
     
 </form>
-
+</div>
+</div>
 
 {% endblock %}
