@@ -110,9 +110,9 @@ ul > li:hover > ol {
 }
 
 #footer {
-    position: absolute;
-    bottom: 0;
     width: 1000px;
+    display: grid;
+    align-items: flex-end;
 
 }
 
