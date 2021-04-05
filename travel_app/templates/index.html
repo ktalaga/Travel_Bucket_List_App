@@ -2,21 +2,26 @@
 {% block content %}
 <h2 class="h2">Most Popular Countries</h2>
 
+<div class="content">
 {% for country in countries[:8] %}
 <div class="box"><a href="/countries/{{country.id}}">{{country.name}}</a></div>
 {% endfor %}
+</div>
 
 <h2 class="h2">Most Popular Cities</h2>
 
+<div class="content">
 {% for city in cities[:8] %}
 <div class="box"><a href="/cities/{{city.id}}">{{city.name}}</a></div>
 {% endfor %}
+</div>
 
 <h2 class="h2">Most Popular Sights</h2>
-
+<div class="content">
 {% for sight in sights[:8] %}
 <div class="box"><a href="/sights/{{sight.id}}">{{sight.name}}</a></div>
 {% endfor %}
+</div>
 
 
 

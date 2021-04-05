@@ -4,11 +4,11 @@
 
 
 
-
+<div class="content">
 {% for country in countries %}
 {% if not country.visited %}
 <div class="box">
-<a href="/countries/{{country.id}}">{{country.name}}</a>
+    <a href="/countries/{{country.id}}">{{country.name}}</a>
 <div>
 <p>You haven't visited this country yet</p>
 </div>
@@ -16,9 +16,9 @@
     <input type="submit" value="Mark as Visited" />  
 </form>
 </div>
-<br>
 {% endif %}
 {% endfor %}
+</div>
 <a class="link_in_content" href="/countries/visited">Go to Visited Countries</a>
 
 {% endblock %}

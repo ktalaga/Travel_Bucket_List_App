@@ -2,6 +2,7 @@
 {% block content %}
 <h2 class="h2">Visited Countries</h2>
 
+<div class="content">
 {% for country in countries %}
 {% if country.visited %}
 <div class="box">
@@ -15,11 +16,10 @@
     <input type="submit" value="Move to Bucket List" />  
 </form>
 </div>
-<br>
 
 {% endif %}
 {% endfor %}
-
+</div>
 <a class="link_in_content" href="/countries/notvisited">Go to Bucket List Countries</a>
 
 {% endblock %}

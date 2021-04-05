@@ -4,7 +4,7 @@
 
 
 
-
+<div class="content">
 {% for sight in sights %}
 {% if sight.visited %}
 <div class="box">
@@ -18,11 +18,11 @@
     <input type="submit" value="Move to Bucket List" />  
 </form>
 </div>
-<br>
+
 
 {% endif %}
 {% endfor %}
-
+</div>
 <a class="link_in_content" href="/sights/notvisited">Go to Sights Bucket List</a>
 
 {% endblock %}

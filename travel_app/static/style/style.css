@@ -203,26 +203,36 @@ ul > li:hover > ol {
     justify-content: center;
 }
 
+.wrapper {
+    padding-top: 30px;
+    width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
 .box {
     width: 228px;
     height: 228px;
     background-color: teal;
     border: 1px solid #303030;
     margin-top: 26px;
+    margin-right: 26.67px;
 
 }
 .content {
-    padding-top: 30px;
-    width: 1000px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
-    padding-bottom: 100px;
+    justify-content: start;
 
 }
+.box:nth-child(4n) {
+    margin-right: 0;
+}
+
+
 .h2 {
     flex: 100%;
     
