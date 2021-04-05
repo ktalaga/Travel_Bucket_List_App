@@ -3,22 +3,22 @@
 <h2>Most Popular Countries</h2>
 
 {% for country in countries %}
-{{country.name}}
+<div class="box">{{country.name}}</div>
 {% endfor %}
 
 <h2>Most Popular Cities</h2>
 
 {% for city in cities %}
-{{city.name}}
+<div class="box">{{city.name}}</div>
 {% endfor %}
 
 <h2>Most Popular Sights</h2>
 
 {% for sight in sights %}
-{{sight.name}}
+<div class="box">{{sight.name}}</div>
 {% endfor %}
 
-
+<div class="box"></div>
 
 
 {% endblock %}
