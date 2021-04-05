@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Visited Countries</h2>
+<h2 class="h2">Visited Countries</h2>
 
 {% for country in countries %}
 {% if country.visited %}
-<div>
+<div class="box">
 <a href="/countries/{{country.id}}">{{country.name}}</a>
 <p>You have already  visited this country</p>
 <div>
@@ -20,6 +20,6 @@
 {% endif %}
 {% endfor %}
 
-<a href="/countries/notvisited">Go to Bucket List Countries</a>
+<a class="link_in_content" href="/countries/notvisited">Go to Bucket List Countries</a>
 
 {% endblock %}

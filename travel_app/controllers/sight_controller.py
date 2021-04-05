@@ -9,11 +9,6 @@ import repositories.city_repository as city_repository
 
 sights_blueprint = Blueprint("sights", __name__)
 
-@sights_blueprint.route("/sights")
-def sights():
-    sights = sight_repository.select_all()
-    return render_template("sights/index.html", sights = sights)
-
 
 @sights_blueprint.route("/sights/notvisited")
 def not_visited():

@@ -7,9 +7,6 @@ import repositories.country_repository as country_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
-@countries_blueprint.route("/countries")
-def countries():
-    return render_template("/countries/index.html")
 
 @countries_blueprint.route("/countries/notvisited")
 def not_visited():

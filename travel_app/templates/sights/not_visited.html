@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Sights: Sights on Bucket List</h2>
+<h2 class="h2">Sights on Bucket List</h2>
 
 
 
 
 {% for sight in sights %}
 {% if not sight.visited %}
-<div>
+<div class="box">
 <a href="/sights/{{sight.id}}">{{sight.name}}</a>
 <p>{{sight.city.name}}</p>
 <div>
@@ -20,6 +20,6 @@
 <br>
 {% endif %}
 {% endfor %}
-<a href="/sights/visited">Go to Visited Sights</a>
+<a class="link_in_content" href="/sights/visited">Go to Visited Sights</a>
 
 {% endblock %}

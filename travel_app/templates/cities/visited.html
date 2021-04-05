@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Visited Cities</h2>
+<h2 class="h2">Visited Cities</h2>
 
 
 
 
 {% for city in cities %}
 {% if city.visited %}
-<div>
+<div class="box">
 <a href="/cities/{{city.id}}">{{city.name}}</a>
 <p>{{city.country.name}}</p>
 <div>
@@ -24,6 +24,6 @@
 
 
 
-<a href="/cities/notvisited">Go to Cities Bucket List</a>
+<a class="link_in_content" href="/cities/notvisited">Go to Cities Bucket List</a>
 
 {% endblock %}

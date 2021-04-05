@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Countries on Bucket List</h2>
+<h2 class="h2">Countries on Bucket List</h2>
 
 
 
 
 {% for country in countries %}
 {% if not country.visited %}
-<div>
+<div class="box">
 <a href="/countries/{{country.id}}">{{country.name}}</a>
 <div>
 <p>You haven't visited this country yet</p>
@@ -19,6 +19,6 @@
 <br>
 {% endif %}
 {% endfor %}
-<a href="/countries/visited">Go to Visited Countries</a>
+<a class="link_in_content" href="/countries/visited">Go to Visited Countries</a>
 
 {% endblock %}
