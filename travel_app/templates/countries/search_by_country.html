@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<form action="bycountry">
+<form action="/bycountry" method = "POST">
 
     <div>
         <label for="country">Country</label>
@@ -12,7 +12,7 @@
         </select>
     </div>
     {% for country in countries %}
-    <a href="/countries/{{country.id}}/edit">{{country.name}}</a>
+    {{country.name}}
     {% endfor %}
     
 
