@@ -34,7 +34,7 @@ def show(id):
 @sights_blueprint.route("/sights/<id>/delete", methods=['POST'])
 def delete_sight(id):
     sight_repository.delete(id)
-    return redirect('/sights')
+    return redirect('/')
 
 
 @sights_blueprint.route("/addsight")
@@ -52,7 +52,9 @@ def newsight():
     city = city_repository.select(city_id)
     sight = Sight(name, picture_url, city, visited)
     sight_repository.save(sight)
-    return redirect("/sights")
+    if sight.visited == "False":
+        return redirect("/sights/notvisited")
+    return redirect("/sights/visited")
 
 @sights_blueprint.route("/sights/<id>/edit")
 def edit(id):
