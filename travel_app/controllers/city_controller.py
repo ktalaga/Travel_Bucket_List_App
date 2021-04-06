@@ -46,10 +46,11 @@ def addcity():
 @cities_blueprint.route("/addcity", methods=["POST"])
 def newcity():
     name = request.form["city"]
+    picture_url = request.form['picture_url']
     visited = request.form["visited"]
     country_id = request.form["country_id"]
     country = country_repository.select(country_id)
-    city = City(name, country, visited)
+    city = City(name, picture_url, country, visited)
     city_repository.save(city)
     if city.visited == True:
         return redirect("/cities/visited")
@@ -67,10 +68,11 @@ def edit(id):
 @cities_blueprint.route("/cities/<id>", methods=["POST"])
 def update(id):
     name = request.form["city"]
+    picture_url = request.form['picture_url']
     country_id = request.form["country_id"]
     visited = request.form["visited"]
     country = country_repository.select(country_id)
-    city = City(name, country, visited, id)
+    city = City(name, picture_url, country, visited, id)
     city_repository.update(city)
     return redirect(f"/cities/{id}")
 

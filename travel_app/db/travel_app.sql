@@ -13,6 +13,7 @@ CREATE TABLE countries (
 CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     name VARCHAR,
+    picture_url TEXT,
     visited BOOLEAN,
     country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );

@@ -8,16 +8,13 @@
 {% for city in cities %}
 {% if city.visited %}
 <div class="box">
-<a href="/cities/{{city.id}}">{{city.name}}</a>
-<p>{{city.country.name}}</p>
-
-<div>
-<p>You have already  visited this city</p>
-
-</div>
-<form action="/cities/{{ city.id }}/visited" method="POST">
-    <input type="submit" value="Move to Bucket List" />  
+    <div class="overlay">
+        <a href="/cities/{{city.id}}"><img src="{{city.picture_url}}" alt="image" width="228px" height="228px"></a>
+        <p class="name_in_box">{{city.name}}, {{city.country.name}}</p>
+        <form class="link_in_box" action="/cities/{{ city.id }}/visited" method="POST">
+        <input class="button" type="submit" value="Move to Bucket List" />  
 </form>
+</div>
 </div>
 {% endif %}
 {% endfor %}

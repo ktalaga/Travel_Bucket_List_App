@@ -40,12 +40,13 @@ country_repository.save(country_2)
 # country_repository.save(country_8)
 
 
+city_image_1 = "https://www.dentons.com/-/media/images/website/background-images/offices/aberdeen/aberdeen-city.ashx"
+city_1 = City('Aberdeen', city_image_1, country_1)
+city_repository.save(city_1)
 
-# city_1 = City('Aberdeen', country_1)
-# city_repository.save(city_1)
-
-# city_2 = City('Glasgow', country_1)
-# city_repository.save(city_2)
+city_image_2 = "https://img.travelawaits.com/filter:centercrop/quill/e/0/6/1/9/4/e0619492563020dcea1769f8d9ea0acc5b7abcfa.jpg?w=800&h=800"
+city_2 = City('Glasgow', city_image_2, country_1)
+city_repository.save(city_2)
 
 # city_3 = City('Edinburgh', country_1)
 # city_repository.save(city_3)
