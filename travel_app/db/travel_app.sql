@@ -5,7 +5,9 @@ DROP TABLE countries;
 CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
     name VARCHAR,
+    picture_url TEXT,
     visited BOOLEAN
+
 );
 
 CREATE TABLE cities (
