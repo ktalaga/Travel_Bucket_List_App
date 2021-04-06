@@ -39,6 +39,7 @@ header
     background-color: #303030;
     height: 60px;
     text-align: center;
+    z-index: 2147483647 !important;  
 
 
 
@@ -86,7 +87,8 @@ ul > li > ol {
     padding: 0;
     margin: 0;
     display: none;
-    z-index: 1000 !important;  
+
+    
 }
 ul > li > ol > li {
     background-color: #b8b8b8;
