@@ -17,8 +17,9 @@ country_image_1 = "https://scotland5gcentre.org/wp-content/uploads/2020/06/rural
 country_1 = Country('Scotland', country_image_1, True)
 country_repository.save(country_1)
 
-# country_2 = Country('England')
-# country_repository.save(country_2)
+country_image_2 = "https://www.wandermum.co.uk/wp-content/uploads/2017/04/Troutbeck-Park-and-Farmhouse-Cumbria.-Beatrix-Potter.-%C2%A9VisitBritain-Britain-on-View.-800x800.jpg"
+country_2 = Country('England', country_image_2)
+country_repository.save(country_2)
 
 # country_3 = Country('Poland')
 # country_repository.save(country_3)

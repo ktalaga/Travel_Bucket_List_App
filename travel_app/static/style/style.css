@@ -276,7 +276,6 @@ input[type=text],input[type=submit], select, button {
     width: 230px;
     background-color: #efefef;
     color: #666;
-    border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 20px;
     padding: 10px;
@@ -318,5 +317,34 @@ input[type=submit]:hover{
 
 }
 
+.overlay {
+    position: relative;
+}
+
+.button {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    cursor: pointer;
+
+
+
+}
+
+.overlay .link_in_box {
+    position: absolute;
+    display: block;
+    width: 230px;
+    height: 40px;
+    background-color: #111;
+    left: -1px;
+    bottom: 3px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay:hover .link_in_box {
+    opacity: 0.8;
+}
 
 

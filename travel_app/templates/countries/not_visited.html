@@ -8,8 +8,8 @@
 {% for country in countries %}
 {% if not country.visited %}
 <div class="box">
-    <img src="{{country.picture_url}}" alt="image" width="228px" height="228px">
-    <a href="/countries/{{country.id}}">{{country.name}}</a>
+
+    <a href="/countries/{{country.id}}">    <img src="{{country.picture_url}}" alt="image" width="228px" height="228px"></a>
 
 <form action="/countries/{{ country.id }}/notvisited" method="POST">
     <input type="submit" value="Mark as Visited" />  
