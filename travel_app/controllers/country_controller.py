@@ -74,14 +74,14 @@ def mark_notvisited(id):
         return redirect("/countries/visited")
 
 
-# @countries_blueprint.route("/search/bycountry")
-# def bycountry():
-#     countries = country_repository.select_all()
-#     return render_template("countries/search_by_country.html", countries = countries)
+@countries_blueprint.route("/search/bycountry")
+def bycountry():
+    countries = country_repository.select_all()
+    return render_template("countries/search_by_country.html", countries = countries)
 
-# @countries_blueprint.route("/bycountry", methods=['POST'])
-# def search_by_country():
-#     print(request.form)
-#     id = request.form["country_id"]
-#     country_repository.select(id)
-#     return redirect(f"/countries/{id}")
+@countries_blueprint.route("/bycountry", methods=['POST'])
+def search_by_country():
+    print(request.form)
+    id = request.form["country_id"]
+    country_repository.select(id)
+    return redirect(f"/countries/{id}")

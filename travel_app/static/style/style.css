@@ -340,11 +340,28 @@ input[type=submit]:hover{
     left: -1px;
     bottom: 3px;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .overlay:hover .link_in_box {
-    opacity: 0.8;
+    opacity: 0.7;
+}
+.name_in_box {
+    position: absolute;
+    display: block;
+    width: 230px;
+    height: 28px;
+    background-color: #111;
+    left: -1px;
+    top: -20px;
+    color: whitesmoke;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+
+
+}
+.overlay:hover .name_in_box {
+    opacity: 0.7;
 }
 
 
