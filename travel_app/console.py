@@ -67,9 +67,9 @@ city_repository.save(city_2)
 # city_repository.save(city_7)
 
 
-
-# city_9 = City('London', country_2, True)
-# city_repository.save(city_9)
+city_image_9 = "https://www.danielwebster.co.uk/wp-content/uploads/2016/11/LondonAbove-800x800.jpg"
+city_9 = City('London', city_image_9, country_2, True)
+city_repository.save(city_9)
 
 # city_10 = City('Manchester', country_2, True)
 # city_repository.save(city_10)
@@ -96,15 +96,17 @@ city_repository.save(city_2)
 # city_repository.save(city_17)
 
 
+sight_image_1 = "https://aws-tiqets-cdn.imgix.net/images/content/306cbdc84c584ea8aa84d5d4f878bccb.jpg?auto=format&fit=crop&h=800&ixlib=python-3.2.1&q=70&w=800&s=0393b0e037dba33db75b006143e940ea"
+sight_1 = Sight('Royal Albert Hall', sight_image_1, city_9)
+sight_repository.save(sight_1)
 
-# sight_1 = Sight('Royal Albert Hall', city_9)
-# sight_repository.save(sight_1)
+sight_image_2 = "https://www.towerbridge.org.uk/sites/default/files/2020-05/2017-03-22-Tower-Bridge-R8-155-800%282%29.jpg"
+sight_2 = Sight('Tower Bridge', sight_image_2, city_9)
+sight_repository.save(sight_2)
 
-# sight_2 = Sight('Tower Bridge', city_9)
-# sight_repository.save(sight_2)
-
-# sight_3 = Sight('Big Ben', city_9)
-# sight_repository.save(sight_3)
+sight_image_3 = "https://www.parkplazalondonwaterloo.com/wp-content/uploads/2018/12/big-ben-1-800x800.jpg"
+sight_3 = Sight('Big Ben', sight_image_3, city_9)
+sight_repository.save(sight_3)
 
 # sight_4 = Sight('Tower of London', city_9)
 # sight_repository.save(sight_4)

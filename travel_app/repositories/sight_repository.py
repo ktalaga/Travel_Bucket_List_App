@@ -5,8 +5,8 @@ from models.city import City
 import repositories.city_repository as city_repository
 
 def save(sight):
-    sql = "INSERT INTO sights(name, visited, city_id) VALUES ( %s, %s, %s ) RETURNING id"
-    values = [sight.name, sight.visited, sight.city.id]
+    sql = "INSERT INTO sights(name, picture_url, visited, city_id) VALUES ( %s, %s, %s, %s) RETURNING id"
+    values = [sight.name, sight.picture_url, sight.visited, sight.city.id]
     results = run_sql( sql, values )
     sight.id = results[0]['id']
     return sight
@@ -25,7 +25,7 @@ def select_all():
 
     for row in results:
         city = city_repository.select(row['city_id'])
-        sight = Sight(row['name'], city, row['visited'], row['id'])
+        sight = Sight(row['name'],row['picture_url'], city, row['visited'], row['id'])
         sights.append(sight)
     return sights
 
@@ -43,7 +43,7 @@ def select(id):
 
     if result is not None:
         city = city_repository.select(result['city_id'])
-        sight = Sight(result['name'], city, result['visited'], result['id'] )
+        sight = Sight(result['name'], result['picture_url'], city, result['visited'], result['id'] )
     return sight
 
 def delete(id):
@@ -52,8 +52,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(sight):
-    sql = "UPDATE sights SET (name, city_id, visited) = (%s, %s, %s) WHERE id = %s"
-    values = [sight.name, sight.city.id, sight.visited, sight.id]
+    sql = "UPDATE sights SET (name, picture_url, city_id, visited) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [sight.name, sight.picture_url, sight.city.id, sight.visited, sight.id]
     run_sql(sql, values)
 
 def mark_notvisited(id):

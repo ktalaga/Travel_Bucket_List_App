@@ -8,16 +8,14 @@
 {% for sight in sights %}
 {% if not sight.visited %}
 <div class="box">
-<a href="/sights/{{sight.id}}">{{sight.name}}</a>
-<p>{{sight.city.name}}</p>
-<div>
-<p>You haven't visited this sight yet</p>
-</div>
-<form action="/sights/{{ sight.id }}/notvisited" method="POST">
-    <input type="submit" value="Mark as Visited" />  
+    <div class="overlay">
+        <a href="/sights/{{sight.id}}"><img src="{{sight.picture_url}}" alt="image" width="228px" height="228px"></a>
+        <p class="name_in_box">{{sight.name}}, {{sight.city.name}}</p>
+        <form class="link_in_box" action="/sights/{{ sight.id }}/notvisited" method="POST">
+        <input class="button" type="submit" value="Mark as Visited" />  
 </form>
 </div>
-
+</div>
 {% endif %}
 {% endfor %}
 </div>

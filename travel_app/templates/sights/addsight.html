@@ -4,25 +4,24 @@
 
 <form action="/addsight" method="POST">
 
-    <div>
-        <label for="sight">City</label>
+
+        <label for="sight">Sight</label>
         <input type="text" id="sight" name="sight" placeholder="Sight" required autofocus>
-    </div>
-    <div>
+        <label for="picture_url">Picture URL</label>
+        <input type="text" id="picture_url" name="picture_url" placeholder="picture_url" required autofocus>
         <label for="visited">Visited?:</label>
         <select id="visited" name="visited">
         <option value="True">Yes</option>
         <option value="False">No</option>
         </select>
-    </div>
-    <div>
+
         <label for="city">City</label>
         <select id="city" name="city_id">
             {% for city in cities%}
                 <option value={{city.id}}>{{city.name}}</option>
             {% endfor %}
         </select> <p>If city is not on the list, you can add your city <a href="/addcity">here.</a></li></p>
-    </div>
+
     <button type="submit">Add Sight</button>
 
 </form>

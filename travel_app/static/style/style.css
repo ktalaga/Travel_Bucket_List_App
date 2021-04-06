@@ -86,16 +86,17 @@ ul > li > ol {
     padding: 0;
     margin: 0;
     display: none;
+    z-index: 1000 !important;  
 }
 ul > li > ol > li {
     background-color: #b8b8b8;
     position: relative;
-    z-index: 100;
 
 }
 
 ul > li > ol > li:hover {
     background-color: #303030;
+
 }
 ul > li > ol > li > a {
     color: #303030 ;
@@ -327,8 +328,6 @@ input[type=submit]:hover{
     padding: 0!important;
     cursor: pointer;
 
-
-
 }
 
 .overlay .link_in_box {
@@ -347,15 +346,16 @@ input[type=submit]:hover{
     opacity: 0.7;
 }
 .name_in_box {
+    font-size: 15px;
     position: absolute;
     display: block;
     width: 230px;
-    height: 28px;
+    height: 20px;
     background-color: #111;
     left: -1px;
-    top: -20px;
+    top: -15px;
     color: whitesmoke;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 
