@@ -52,11 +52,9 @@ def newcity():
     country = country_repository.select(country_id)
     city = City(name, picture_url, country, visited)
     city_repository.save(city)
-    if city.visited == True:
-        return redirect("/cities/visited")
-    else:
+    if city.visited == "False":
         return redirect("/cities/notvisited")
-
+    return redirect("/cities/visited")
 
 @cities_blueprint.route("/cities/<id>/edit")
 def edit(id):
