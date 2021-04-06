@@ -22,13 +22,24 @@ header
 
 .logo 
 {
-    width: 100%;
+    width: 1000px;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     font-size: 35px;
     display: flex;
     justify-content: center;
+    align-content: center;
     margin-top: 0;
+    margin-bottom: 15px;
+    padding-top: 15px;
+
+}
+#logo {
+    font-size: 65px;
+    font-weight: 900;
+    padding: 10px;
+    margin-left: 15px;
 
 }
 
@@ -88,7 +99,7 @@ ul > li > ol {
     margin: 0;
     display: none;
 
-    
+
 }
 ul > li > ol > li {
     background-color: #b8b8b8;
@@ -230,6 +241,7 @@ ul > li:hover > ol {
     flex-flow: wrap;
     justify-content: start;
 
+
 }
 .box:nth-child(4n) {
     margin-right: 0;
@@ -358,7 +370,10 @@ input[type=submit]:hover{
     top: -15px;
     color: whitesmoke;
     opacity: 0.6;
+
 }
+
+
 
 
 

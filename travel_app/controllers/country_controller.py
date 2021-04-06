@@ -31,7 +31,10 @@ def newccountry():
     visited = request.form["visited"]
     country = Country(name, picture_url, visited)
     country_repository.save(country)
-    return redirect("/countries")
+    if country.visited == "True":
+        return redirect("/countries/visited")
+    else:
+        return redirect("/countries/notvisited")
 
 
 @countries_blueprint.route("/countries/<id>")
@@ -59,7 +62,7 @@ def update(id):
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
 def delete_country(id):
     country_repository.delete(id)
-    return redirect('/countries')
+    return redirect('/')
 
 
 @countries_blueprint.route("/countries/<id>/notvisited", methods=['POST'])
