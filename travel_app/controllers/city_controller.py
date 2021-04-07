@@ -45,16 +45,22 @@ def addcity():
 
 @cities_blueprint.route("/addcity", methods=["POST"])
 def newcity():
-    name = request.form["city"]
+    new_name = request.form["city"]
     picture_url = request.form['picture_url']
     visited = request.form["visited"]
     country_id = request.form["country_id"]
     country = country_repository.select(country_id)
-    city = City(name, picture_url, country, visited)
-    city_repository.save(city)
-    if city.visited == "False":
+    city = City(new_name, picture_url, country, visited)
+    cities = city_repository.select_all()
+    names = [city.name for city in cities]
+    if new_name not in names:
+        city_repository.save(city)
+    else:
+        return render_template("/exception.html")
+    if city.visited == "True":
+        return redirect("/cities/visited")
+    elif city.visited == "False":
         return redirect("/cities/notvisited")
-    return redirect("/cities/visited")
 
 @cities_blueprint.route("/cities/<id>/edit")
 def edit(id):
