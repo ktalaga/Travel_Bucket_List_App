@@ -26,14 +26,19 @@ def addcountry():
 
 @countries_blueprint.route("/addcountry", methods=["POST"])
 def newccountry():
-    name = request.form["country"]
+    new_name = request.form["country"]
     picture_url = request.form["picture_url"]
     visited = request.form["visited"]
-    country = Country(name, picture_url, visited)
-    country_repository.save(country)
+    country = Country(new_name, picture_url, visited)
+    countries = country_repository.select_all()
+    names = [country.name for country in countries]
+    if new_name not in names:
+        country_repository.save(country)
+    else:
+        return render_template("/exception.html")
     if country.visited == "True":
         return redirect("/countries/visited")
-    else:
+    elif country.visited == "False":
         return redirect("/countries/notvisited")
 
 

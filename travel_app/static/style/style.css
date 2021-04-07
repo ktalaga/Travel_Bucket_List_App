@@ -234,6 +234,7 @@ ul > li:hover > ol {
     margin-top: 26px;
     margin-right: 26.67px;
 
+
 }
 .content {
 
@@ -243,6 +244,8 @@ ul > li:hover > ol {
 
 
 }
+
+
 .box:nth-child(4n) {
     margin-right: 0;
 }
@@ -250,6 +253,8 @@ ul > li:hover > ol {
 
 .h2 {
     flex: 100%;
+    margin: 0;
+
     
 }
 a {
@@ -367,9 +372,10 @@ input[type=submit]:hover{
     height: 20px;
     background-color: #111;
     left: -1px;
-    top: -15px;
+    top: 0px;
     color: whitesmoke;
     opacity: 0.6;
+    margin-top: 0;
 
 }
 
