@@ -71,14 +71,22 @@ def edit(id):
 
 @cities_blueprint.route("/cities/<id>", methods=["POST"])
 def update(id):
-    name = request.form["city"]
+    new_name = request.form["city"]
     picture_url = request.form['picture_url']
     country_id = request.form["country_id"]
     visited = request.form["visited"]
     country = country_repository.select(country_id)
-    city = City(name, picture_url, country, visited, id)
-    city_repository.update(city)
-    return redirect(f"/cities/{id}")
+    city = City(new_name, picture_url, country, visited, id)
+    cities = city_repository.select_all()
+    names = [city.name for city in cities]
+    if new_name not in names:
+        city_repository.update(city)
+    else:
+        return render_template("/exception.html")
+    if city.visited == "True":
+        return redirect("/cities/visited")
+    elif city.visited == "False":
+        return redirect("/cities/notvisited")
 
 @cities_blueprint.route("/cities/<id>/visited", methods=['POST'])
 def mark_notvisited(id):

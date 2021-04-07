@@ -71,14 +71,23 @@ def edit(id):
 
 @sights_blueprint.route("/sights/<id>", methods=["POST"])
 def update(id):
-    name = request.form["sight"]
+    new_name = request.form["sight"]
     picture_url = request.form["picture_url"]
     city_id = request.form["city_id"]
     visited = request.form["visited"]
     city = city_repository.select(city_id)
-    sight = Sight(name, picture_url, city, visited, id)
-    sight_repository.update(sight)
-    return redirect(f"/sights/{id}")
+    sight = Sight(new_name, picture_url, city, visited, id)
+
+    sights = sight_repository.select_all()
+    names = [sight.name for sight in sights]
+    if new_name not in names:
+        sight_repository.update(sight)
+    else:
+        return render_template("/exception.html")
+    if sight.visited == "True":
+        return redirect("/sights/visited")
+    elif sight.visited == "False":
+        return redirect("/sights/notvisited")
 
 
 @sights_blueprint.route("/sights/<id>/visited", methods=['POST'])
