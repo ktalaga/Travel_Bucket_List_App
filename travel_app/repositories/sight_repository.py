@@ -60,3 +60,4 @@ def mark_notvisited(id):
     sql = "UPDATE sights SET visited = %s WHERE id = %s"
     values = [False, id]
     run_sql(sql, values)
+

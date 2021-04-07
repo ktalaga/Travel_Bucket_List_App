@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="edit_form_container">
+<div  class="search_form">
 
 <form action="/bycountry" method = "POST">
 
     <div>
-        <label for="country">Country</label>
+        <label for="country">Country</label><br>
         <select id="country" name="country_id">
             {% for country in countries%}
                 <option value={{country.id}}>{{country.name}}</option>
@@ -12,10 +14,9 @@
         </select>
     </div>
 
-    
-
     <button type="submit">Search Destination</button>
 </form>
-
+</div>
+</div>
 
 {% endblock %}

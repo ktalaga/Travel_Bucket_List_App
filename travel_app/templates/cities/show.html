@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-    <p>{{city.name}}</p>
-    <p>{{city.country.name}}</p>
+<div class="edit_form_container">
+<div  class="show_form">
+
+    <p>{{city.name}}, {{city.country.name}}</p>
+   
         {% if city.visited %}
         <p>You've visited this city</p>
         {% else %}
@@ -11,13 +13,27 @@
 
     <a class="show_links" href="/cities/{{city.id}}/edit">Edit city</a>
 
-
-    
-
-
-</div>
-
-
 <form action="/cities/{{ city.id }}/delete" method="POST">
     <input type="submit" value="delete" /></form>
+</div>
+</div>
+
+<h2 class="h2">Sights in {{city.name}}</h2>
+
+<div class="content">
+{% for sight in sights %}
+{% if sight.city.name == city.name %}
+<div class="box">
+    <div class="overlay">
+        <a href="/sights/{{sight.id}}"><img src="{{sight.picture_url}}" alt="image" width="228px" height="228px"></a>
+        <p class="name_in_box">{{sight.name}}</p>
+
+</form>
+</div>
+</div>
+{% endif %}
+{% endfor %}
+
+<a class="link_in_content" href="/sights/visited">Go to Visited Sights</a>
+
 {% endblock %}

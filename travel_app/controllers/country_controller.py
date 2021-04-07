@@ -4,6 +4,8 @@ from flask import Blueprint
 from models.country import Country
 
 import repositories.country_repository as country_repository
+import repositories.city_repository as city_repository
+import repositories.sight_repository as sight_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
@@ -45,7 +47,9 @@ def newccountry():
 @countries_blueprint.route("/countries/<id>")
 def show(id):
     country = country_repository.select(id)
-    return render_template("/countries/show.html", country = country)
+    cities = city_repository.select_all()
+    sights = sight_repository.select_all()
+    return render_template("/countries/show.html", country = country, cities = cities, sights = sights)
 
 
 @countries_blueprint.route("/countries/<id>/edit")
