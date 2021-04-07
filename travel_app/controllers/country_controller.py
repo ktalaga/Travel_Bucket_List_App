@@ -56,12 +56,23 @@ def edit(id):
 
 @countries_blueprint.route("/countries/<id>", methods=["POST"])
 def update(id):
-    name = request.form["country"]
+    new_name = request.form["country"]
     picture_url = request.form["picture_url"]
     visited = request.form["visited"]
-    country = Country(name, picture_url, visited, id)
-    country_repository.update(country)
-    return redirect(f"/countries/{id}")
+    country = Country(new_name, picture_url, visited, id)
+    
+
+    countries = country_repository.select_all()
+    names = [country.name for country in countries]
+    if new_name not in names:
+        country_repository.update(country)
+    else:
+        return render_template("/exception.html")
+    if country.visited == "True":
+        return redirect("/countries/visited")
+    elif country.visited == "False":
+        return redirect("/countries/notvisited")
+
 
 
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
