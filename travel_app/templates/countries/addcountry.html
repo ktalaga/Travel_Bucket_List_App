@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="edit_form_container">
 
+<div  class="edit_form">
+    
 <form action="/addcountry" method="POST">
-    <label for="country">Country</label>
+    <label for="country">Country:</label>
     <input type="text" id="country" name="country" placeholder="country" required autofocus>
 
-    <label for="picture_url">Picture URL</label>
+    <label for="picture_url">Picture URL:</label>
     <input type="text" id="picture_url" name="picture_url" placeholder="picture_url" required autofocus>
 
 
-    <label for="visited">Visited</label>
+    <label for="visited">Visited?</label>
     <select id="visited" name="visited">
             <option value="True">Yes</option>
             <option value="False">No</option>
@@ -18,6 +21,8 @@
     <button type="submit">Add Country</button>
 
 </form>
+</div>
+</div>
 
 
 {% endblock %}

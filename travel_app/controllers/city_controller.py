@@ -22,7 +22,10 @@ def visited():
 
 @cities_blueprint.route("/cities/<id>/notvisited", methods=['POST'])
 def mark_visited(id):
-    city_repository.mark_visited(id)
+    city_repository.mark_visited(id) 
+    city = city_repository.select(id)
+    country_id = city.country.id
+    country_repository.mark_visited(country_id)
     return redirect("/cities/notvisited")
 
 @cities_blueprint.route("/cities/<id>")
@@ -92,3 +95,10 @@ def update(id):
 def mark_notvisited(id):
         city_repository.mark_notvisited(id)
         return redirect("/cities/visited")
+
+
+
+
+
+
+

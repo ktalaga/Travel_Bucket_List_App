@@ -23,6 +23,9 @@ def visited():
 @sights_blueprint.route("/sights/<id>/notvisited", methods=['POST'])
 def mark_visited(id):
     sight_repository.mark_visited(id)
+    sight = sight_repository.select(id)
+    city_id = sight.city.id
+    city_repository.mark_visited(city_id)
     return redirect("/sights/notvisited")
 
 @sights_blueprint.route("/sights/<id>")

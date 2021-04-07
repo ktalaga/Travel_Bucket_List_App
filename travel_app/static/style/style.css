@@ -280,11 +280,12 @@ a {
     display: flex;
     justify-content: center;
 
+
 }
 .edit_form {
 
     width: 280px;
-    height: 370px;
+    height: 440px;
     background-color:#c9c9c9;
     padding: 50px;
     padding-top: 10px;

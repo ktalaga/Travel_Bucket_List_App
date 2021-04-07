@@ -7,19 +7,17 @@
     <label for="city">Name:</label>
     <input type="text" id="city" name="city" value="{{city.name}}" required autofocus>
 
-    <label for="picture_url">Picture URL</label>
+    <label for="country">Country:</label>
+    <select id="country" name="country_id">
+        {% for country in countries%}
+
+            <option value={{country.id}}>{{country.name}}</option>
+        {% endfor %}
+    </select> 
+    <p class="small_text">If country is not on the list, you can add country<a class="small_link" href="/addcountry">here</a></p>
+    
+    <label for="picture_url">Picture URL:</label>
     <input type="text" id="picture_url" name="picture_url" placeholder="picture_url" required autofocus>
-
-    <div>
-        <label for="country">Country</label>
-        <select id="country" name="country_id">
-            {% for country in countries%}
-
-                <option value={{country.id}}>{{country.name}}</option>
-            {% endfor %}
-        </select> 
-        <p class="small_text">If country is not on the list, you can add country<a class="small_link" href="/addcountry">here</a></p>
-    </div>
 
     <label for="visited">Visited?</label>
     <select id="visited" name="visited">
