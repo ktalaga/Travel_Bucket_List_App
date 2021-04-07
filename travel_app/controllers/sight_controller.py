@@ -45,16 +45,22 @@ def addsight():
 
 @sights_blueprint.route("/addsight", methods=["POST"])
 def newsight():
-    name = request.form["sight"]
+    new_name = request.form["sight"]
     picture_url = request.form["picture_url"]
     visited = request.form["visited"]
     city_id = request.form["city_id"]
     city = city_repository.select(city_id)
-    sight = Sight(name, picture_url, city, visited)
-    sight_repository.save(sight)
-    if sight.visited == "False":
+    sight = Sight(new_name, picture_url, city, visited)
+    sights = sight_repository.select_all()
+    names = [sight.name for sight in sights]
+    if new_name not in names:
+        sight_repository.save(sight)
+    else:
+        return render_template("/exception.html")
+    if sight.visited == "True":
+        return redirect("/sights/visited")
+    elif sight.visited == "False":
         return redirect("/sights/notvisited")
-    return redirect("/sights/visited")
 
 @sights_blueprint.route("/sights/<id>/edit")
 def edit(id):
