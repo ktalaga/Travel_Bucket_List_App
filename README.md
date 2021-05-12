@@ -1,4 +1,5 @@
-Travel_Bucket_List_App - The app was designed and created by Konrad Talaga as part of the immersive Professional Software Development Course at Codeclan. This is the first full stack app I've ever created having learned coding for just 4 weeks. 
+Travel_Bucket_List_App - The app was designed and created by Konrad Talaga as part of the immersive Professional Software Development Course at Codeclan. This is the first full stack app I've ever created having learned coding for just 4 weeks.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The Project Brief:
 
@@ -8,26 +9,27 @@ Build an app to track someone's travel adventures.
 
 MVP:
 
-The app should allow the user to track countries and cities they want to visit and those they have visited.
-The user should be able to create and edit countries
-Each country should have one or more cities to visit
-The user should be able to create and delete entries for cities
-The app should allow the user to mark destinations as visited or still to see
+- The app should allow the user to track countries and cities they want to visit and those they have visited.
+- The user should be able to create and edit countries
+- Each country should have one or more cities to visit
+- The user should be able to create and delete entries for cities
+- The app should allow the user to mark destinations as visited or still to see
+
 Possible Extensions:
 
-Have separate pages for destinations visited and those still to visit
-Add sights to the destination cities
-Search for destination by continent, city or country
-Any other ideas you might come up with
+- Have separate pages for destinations and those still to visit
+- Add sights to the destination cities
+- Search for destination by continent, city or country
+- Any other ideas you might come up with
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Rules:
 
 The project must be built using only:
 
-HTML / CSS
-Python
-Flask
-PostgreSQL and the psycopg
+- HTML / CSS
+- Python
+- Flask
+- PostgreSQL and psycopg
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 To run the app:
 
@@ -42,10 +44,11 @@ To run the app:
         6.1 python3 console.py
 7. In Terminal 3:
         7.1 flask run
-8. Open http://localhost:5000/ in google chrome
+8. Open http://localhost:5000/ in Google Chrome
 
-You should now see Travel Bucket List App main page in your browser. Enjoy! 
+You should now see Travel Bucket List App main page in your browser. Enjoy!
 Please keep in mind Terminal 3 (the one running flask app) must stay open when the app is being used.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Key features:
 
